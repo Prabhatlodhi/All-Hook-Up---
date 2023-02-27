@@ -6,11 +6,11 @@ function UseEffects() {
     const [second, setsecond] = useState(0)
 
     useEffect(()=>{
-        console.log('First Value')
-    })
+        console.log('First useEffect')
+    },[first])
 
     useEffect(()=>{
-        console.log('First Value')
+        console.log('Second useEffect')
     })
 
     const handleEffects = ()=>{
