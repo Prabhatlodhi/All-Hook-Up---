@@ -1,1 +1,1 @@
-allhooksinreactpractise.netlify.app
+https://allhooksinreactpractise.netlify.app/
