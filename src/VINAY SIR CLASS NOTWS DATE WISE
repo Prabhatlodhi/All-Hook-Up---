@@ -1,0 +1,669 @@
+MOM (Minutes of Meeting):- 
+1. SSR and CSR.
+2. Intro to JSX.
+3. NodeJS basics.
+4. Virtual DOM and Real DOM.
+5. ReactJS.
+6. Woking of ReactJS, folder structure.
+--> OOPS concepts
+7. What is component? Difference between a element and component?
+--> LifeCycle Phases of a component in react.
+8. Class Component - overview
+9. State and Props
+
+--> SSR (Server-side rendering) and CSR (Client-side rendering).
+0. What is render / rendering.
+First time when a page is painted than this is known as render.
+
+SSR :- 
+NextJS, NuxtJS
+In server side rendering the page is rendered from the Server only.
+
+CSR:- ReactJS, VanillaJS, VueJS.
+In the Client side rendering the page is rendered using from user/client side.
+In ssr seo is handled quite easy.
+
+What is JSX ?
+JavaScript Xtension.
+JavaScript XML (Xtensible markup language).
+
+JS and JSX ?
+JS -> For making UI interactive. for making interactive web application.
+JSX -> JSX is the advance version of JS in which we can use HTML tag inside our JS file.
+
+Babel -> It is a compiler which converts JSX code in HTML, CSS and JS
+
+SPA :- Single Page Application.
+
+NodeJS Basics.
+npx create-react-app myapp 
+npx create-next-app .
+Node Package execute
+
+
+npm :- Node Package Manager
+
+
+package.json :- In this file all the details related to our project is available.
+package-lock.json :- This file is the extended version of package.json. It is a good practice to hide package-lock.json . 
+
+Real DOM:-
+Document Object Modal (DOM) :- It is the dom provided by browser will all the requirements of a web page.
+BOM :- Browser Object Modal :- In BOM we have all the details related to a browser.
+window
+location
+navigator
+screen
+history
+
+Virtual DOM :-
+Virtual DOM stores a copy of previous change and compare with the new changes and only update that change in real dom.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <button>+</button>
+    <h2></h2>
+</body>
+<script>
+    let count = 1;
+    let btn = document.querySelector("button");
+    let h2 = document.querySelector("h2");
+    console.log(h2);
+    h2.innerHTML = count;
+    btn.addEventListener("click", () => {
+        count++;
+        console.log(count);
+       // h2.innerHTML = count;// Need to add this to handle the behaviour
+    });
+</script>
+</html>
+
+
+Here the value of count is not chaning in the UI but it is changing in the console. So to overcome this we need to add an extran innerHTML to handle the same behaviour.
+
+So to overcome this kind of issue we will going to use virtual dom.
+
+
+
+==> React JS.
+React is developed by Facebook (Jordan Walke).
+React is a JS Framework and library.
+Framework :- It is a collection of libraries.
+Library :- It is a collection of limited functions.
+
+==> Why we use ReactJS.
+So to make our code less complex and small. It is use to make Interactive User interface.
+
+
+
+==> Folder Structure.
+React Entry point is index.html inside public folder.
+
+
+--> Using Components we can reuse the code again and again.
+
+
+React                           React Native
+---------------------------------------------------------
+Library                         Framework
+Web applications                Mobile applications
+Virtual DOM                     Native API
+animation CSS                   animated API
+HTML Tags                       Can't use HTML Tags
+CSS Styling                     JS stylesheet for styling
+
+React Working
+
+
+First JSX 
+
+1. App -- delete
+2. Changed in header logged in -- delete
+3. Changed in header logged out -- Virtual DOM.
+
+
+
+Virtual DOM -> Babel -> RealDOM
+
+--> OOPS -> Object Oriented Programming Language.
+1. Abstraction :- To show only improtant things and hiding the others.
+2. Encapsulation :- Properties (variables) and methods (functions) into a single container.
+3. Inheritance :- When a child inherit some properties from its parent than it is referred to as Inheritance.
+4. Polymorphism :- Passing different message using same name is known as Polymorphism. Function overloading.
+5. Classes and Object :- Classes and object.
+
+Function Overloading:- Function name is same but function defination will be different.
+
+
+function add(a,b) {
+    return a+b;
+}
+
+function add(a,b,c) {
+    return a+b-c;
+}
+
+function add(a,b,c,d) {
+    return a*b+c+d;
+}
+
+print(add(5,6,5,6));
+
+Here we are passing different parameters to the same function 'add' depending upon the number of parameter the function is being called.
+
+
+Collection of similar type of entities is known as class.
+Collection of entities which posses similar kind of behaviour is known as class.
+
+A single entity of a class is known as Object.
+
+Class of entities which :-
+1. have 4 legs.
+2. two eyes.
+3. 1 tail.
+4. Bark.
+are known as Dogs. -> 10 members
+
+Class of entities which :-
+1. have 4 legs/
+2. two eyes.
+3. drink milk.
+4. likes fish.
+5. do mio mio.
+are known as Cats.
+
+
+College 
+B.Tech -> Same class.
+1. course B.Tech 
+
+School
+12th Commerce 
+12th Bio
+12th Maths
+
+
+element :- The element is returned from the component.
+component:- The large entity of a page is referred to as component. State, props and functions are part of component.
+
+
+
+LifeCycle :-
+Living orga LifeCycle :- 
+Birth - create
+_______
+child  | 
+Teen   |
+Adult  | -- Updation
+Old    |
+________ 
+Die - destroy
+
+Component:- 
+1. Mount -> creation phase
+2. Updation -> state change, props change, ref change.
+3. Unmount -> destroy
+
+water cycle
+
+--> Class Component:- 
+
+
+
+
+
+
+
+
+// let obj = {
+//     name: 'Hello world',
+//     fun : () => {
+//         console.log("hello world");
+//     }
+// }
+
+// Plant photosynthesis :- Sunlight, water, CO2, -> O2 + C6H12O6;
+
+// function photosynthesis (Sunlight, water, CO2) {
+//     ...// O2 ban tha hai or Glucose ban rha hai
+//     return O2, Glucose;
+// }
+
+
+===========================================================================================================
+13 - FEBUARY
+
+Todo :- 
+1. Class Component -> Done
+2. state and props in class Component -> Done
+3. trigerring functions in class Component -> Done
+4. Lifecycles methods of class Component -> In Progress
+5. How to update the component without using the State?
+6. Difference btn ejs/jsx
+
+
+--> Class Component:- 
+    A react component which we make with the help of class or using the "class" keyword.
+
+    So, to make a class react we use Component class from react Library.
+    Here we use inheritance. We inherit some properties of Component class into our Component.
+
+    State and props :- 
+    ==> State
+        State is a react Object which we use to store some data or information about the component.
+        We can use the state only in the particular component.
+        We can't use that state outside of that component.
+        State informs the Virtual Dom (React DOM) the information or data related to component.
+        If there are some changes in the state than state will inform the Virtual DOM that there are some changes in the Component.
+        Virtual DOM than compare and re-paint the component.
+
+    ==> Props
+        We can pass props from one Component to Another Component.
+        Props are Uni-directonal.
+        Props Travel from Parent to Child.
+        We can't Change the value of Props.
+
+    ==> Prop Drilling :- 
+        The process of transferring of data from one component to another component is a DOM tree is known as props drilling.
+
+
+
+                  Index
+                    | 
+                   App
+                    |
+    _________________________________
+    |               |               |
+    Header          Main            Footer
+    |                                   |
+ ________________               _____________
+ |              |               |           |
+ Login       Signup             Foot1       Foot2
+                                |
+                                Foot2
+
+
+
+
+
+
+
+
+
+
+
+Koi Component
+
+
+
+==> Read, write and append 
+Read :- We can only read/use the value;
+Write :- We can assign the new value to it.
+Append:- We can add some more data into the value;
+
+let a = 'Hello';
+console.log(a); // Read
+a = 'Hello2' // Write
+a += 'Hello' // 'Hello2 Hello' Append
+
+
+
+
+
+
+-> To import any component or functions into another file/Component we have to export the function or component from that file.
+-> We can export the function or component in two ways :- 
+    1. By using export default.
+    2. By exporting all the function/Components as a Object.
+
+While importing the Component or function.
+    1. If we are exporting using default than we can directly import it like :- 
+    import Main from 'Component/Main';
+
+    2. If we are exporting all as a Object.
+        a. We should destructure it from the file.
+            import { Main, Main1, Main2 } from 'Component/Main';
+        b. We should import all as any Identifier (Name);
+            import * as Mains from 'Component/Main';
+        
+
+--> Assignments :- 
+    1. Revise today Class.
+    2. Login page.
+        --> User should able to enter email and password.
+        --> When clicking on a button user should able to login and print Hello world with User email address.
+
+        Hello, a@a.com
+
+--> For tomorrow's session :- 
+    1. remaining items of today.
+    2. memo, ref, callback.
+    3. Bootstrap use.
+    4. Font-awesome.
+    5. Conditional rendering.
+    6. Basic intro to Function component.
+    7. Intro to Hooks.
+
+
+
+===========================================================================================================
+14 - FEBUARY
+
+--> For tomorrow's session :- 
+    1. Lifecycles methods of class Component -> Done
+    2. How to update the component without using the State? -> forceUpdate();
+    3. Difference btn ejs/jsx;
+    4. Conditional rendering.
+    5. Font-awesome.
+    6. Bootstrap use.
+    7. ref, memo, callback.
+    8. Basic Project using Class Component.
+
+Reference Link :- 
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+Phases of component lifecycle :- 
+    1. Mount :- create / Birth of a component.
+    2. Update :- Component update :- (new props, state change, forceUpdate);
+    3. Unmount :- compoment destroy / death.
+
+--> Lifecycle methods (first five are the most common and important lifecycle method of class component) :- 
+    1. render() :- This method will run when the component is mounting and updating.
+    2. constructor() :- This method will run when the component is going to mount. It will before render.
+    3. componentDidMount() :- Once the component will be mounted than this method will run.
+    4. componentDidUpdate() :- It will run everytime when a component is updated.
+    5. computentWillUnmount() :- It will run before the Unmount of the Component.
+    6. static getDerivedStateFromProps() :- When the state of a component is dependent on the props than we call this method to update the static according to the props. 
+    7. shouldComponentUpdate(newProps) :- When the new value of prop is equal to old value of prop than we should not re-render the component. So to handle this kind of behaviour we use shouldComponentUpdate().
+    8. getSnapshotBeforeUpdate(prevProps, prevState) :- When we want to store the old value (state, props) or we want to have a snapshot of old value (state, props) so we use getSnapshotBeforeUpdate. It will give us prevProps and prevState
+
+
+
+-> ejs / jsx:- 
+ejs :- embedded javaScript. It will return a HTML element. Server Side Rendering. It is created on server and then transferred to client.
+jsx :- javaScript extension. It will return a HTML element. Client Side Rendering. It is created on client only.
+
+--> Conditional Rendering:- 
+    1. Ternary Operator :- Using ternary operator we can render the Component on the basis of a state/value;
+    2. Using && Operator:- Using this operator we can render the Component on the basis of state/value.
+
+
+Assignemnt:- 
+1. Revise today session.
+2. Design the Header and Login of w3schools. (Login part already done in last assignemnt only need to add CSS styling).
+
+Tomorrow :- 
+
+    1. ref, memo, callback.
+    2. Font-awesome.
+    3. Bootstrap use.
+    4. MUI (Material UI).
+    5. Basic Project using Class Component.
+
+
+
+
+
+===========================================================================================================
+16 - FEBUARY
+
+Todo:- 
+    1. ref, memo, callback.
+    2. Font-awesome.
+    3. Bootstrap use.
+    4. MUI (Material UI).
+
+
+1. ref, memo and callback.
+--> refs
+    The ref is created because it will provide us the element where we provide the ref attribute.
+    We can create a ref using React.createRef();
+    this.myRef = React.createRef();
+    For example :- 
+
+    <input ref={this.myRef} />
+
+    In this.myRef the input element is stored in its current key.
+    So we can use the this.myRef.current for changing the element or for performing any dom manipulation or can access its value
+
+--> PureComponent :- 
+    To perform the optimization in class Component we use PureComponent.
+    Using Pure Component we don't need to use shouldComponentUpdate. It will automatically prevent the rerendring of the Component.
+
+--> Callback :- 
+    To pass the data from child component to parent component we use Callback
+
+
+
+
+
+--> Font Awesome :-
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
+npm i @fortawesome/fontawesome-free-solid
+
+--> React bootstrap :-
+ npm install react-bootstrap bootstrap --> Install
+import 'bootstrap/dist/css/bootstrap.css'; --> It is require for CSS.
+import { Alert, Button, Badge } from 'react-bootstrap'; --> Import
+
+
+--> React MUI
+npm install @mui/material @emotion/react @emotion/styled - install
+
+
+--> React Icons :- 
+npm install react-icons --save
+https://react-icons.github.io/react-icons/icons?name=ci
+
+
+Day After Tomorrow :- 
+    1. Basic Project using Class Component.
+
+===========================================================================================================
+20 - FEBUARY
+
+Todo :- 
+    1. Routing in react-js
+    2. Project
+        a. Small -> Todo
+        b. Assignment -> Image Gallery.
+        c. Big Project -> instagram Reels -> Using Firebase + point
+        d. One big for you guys
+
+
+1. Keyword, Identifier :- 
+    Keyword :- Reserved words of a language are known as keywords.
+    Identifier :- The variables or function name we create while writing are code are known as Identifier.
+
+Note:- Identifier name cannot be a keyword.
+
+
+
+
+--> Routing
+react-router-dom
+
+npm install react-router-dom
+
+1. BrowserRouter :- BrowserRouter tells the virtual DOM that all the roting part is handled in this.
+2. Routes :- Inside Routes we write all the route which we require.
+3. Route :- Route is use to make a route.
+4. Link :- Link is use to Link two different Routes.
+
+
+
+--> To do App :- 
+
+Features:- 
+    1. A heading of the App.
+    2. A + button where we can click and it will open a Modal For us.
+    3. In Modal we will take the entry of Name of the Todo, description of Todo and status of Todo.
+    4. In Modal we will have a button with name. "Add".
+    5. When we click on Add button the Todo will be shown in our Todo List.
+    6. There will be buttons to edit Todo, to Delete Todo.
+    7. We will going to have a search bar where we can search a Todo with name, status.
+    8. We will going have a Footer in below.
+    9. You can Add Features as you require.
+
+
+
+
+
+
+
+
+
+
+--> Calculator using React:- (Assignment After Todo App).
+
+
+
+
+
+===========================================================================================================
+21 - FEBUARY
+
+NOTHING
+
+===========================================================================================================
+8th MARCH
+
+NOTHING
+
+Todo :- 
+    1. Function Component.
+    2. Hooks.
+    3. State and props in function component.
+    4. Custom Hooks.
+    5. Lifecycle (useEffect)
+
+--> Functional Component.
+    Normal Function Component / Arrow function component.
+    normal function / arrow function.
+
+____________________________________________Class Component Sample Code ________________________________________________________________________________
+import React, {Component} from 'react';
+
+class MyComponent extends Component {
+    constructor() {
+        super();
+        this.state = {
+            myState: '',
+        }
+    }
+    handleClick = () => {
+        this.setState({
+            myState: 'Blue',
+        });
+    }
+    render() {
+        return (
+            <div>
+                Hello world {this.state.myState}  {this.props.myProp}
+                <button onClick={this.handleClick} >Click here </button>
+            </div>
+        )
+    }
+}
+export default MyComponent;
+
+___________________________________________Function Component Sample Code ________________________________________________________________________________
+
+import {useState} from 'react';
+
+function MyComponent () {
+        // state, setter Function :- 
+    let [myState, setMyState] = useState('Hello');
+    let [myState2, setMyState2] = useState('');
+
+    let handleClick = () => {
+        setMyState('blue');
+    }
+
+    return (
+        <div>
+            Hello world {myState}
+            <button onClick={handleClick}>Click</button>
+        </div>
+    )
+}
+
+export default MyComponent;
+
+
+===============================================================================================================
+Functional Component introduces hooks.
+Hook will help us to work with state and lifecycle. 
+react 16.8 -> Hook.
+early Feb 2019.
+
+State :- useState();
+useState is a hook which help us to manage the state.
+The useState hook will return us two things.
+    a. state :- It is the container for a specific component.
+    b. setterFunction :- It is use to set the value of the state.
+
+
+// Code reusable.
+// Easy to use.
+// We can make a custom hook as a common hook.
+const useMyCustomHook = (val) => {
+    React.useEffect(() => {
+      console.log(val);
+    }, [])
+}
+
+________________________________________________________________________________
+
+1. Component lifecycle :-
+    a. mount / birth/ create.
+    b. Update.
+    c. unmount.
+
+    useEffect();
+
+    4 variations of useEffect.
+
+    a. component mount.
+        useEffect(()=>{
+
+        },[]);
+
+    b. component update.
+        useEffect(() => {
+
+        },[myState, name]);
+
+    c. component unmount.
+        useEffect(()=>{
+            return {
+
+            }
+        },[]);
+
+  useEffect(() => {
+    // Component ke mount home par.
+    console.log("Component is mounted");
+     return () => {
+        // Component ke unmount hone par
+        console.log("Component is unmounted");
+    }
+  },[]);
+  useEffect(()=>{
+    console.log("I will run bar bar when component is mounted, component is updated")
+  });
+  
+  useEffect(()=>{
+    console.log('Component is updated and new value of state is ', oneState);
+  }, [oneState]);

@@ -1,0 +1,8 @@
+.headernav{
+    display: flex;
+     
+}
+
+.headernav li{
+    margin: 20px;
+}
